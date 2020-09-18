@@ -1,10 +1,10 @@
+// logic to create  metadata for comp and module
 import { Component } from '@angular/core';
 
+// deco  or ann
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // meta data
+  selector: 'app-start',
+  template: '<h1>Hello World..!</h1>',
 })
-export class AppComponent {
-  title = 'angular-project';
-}
+export class FirstComponent {}

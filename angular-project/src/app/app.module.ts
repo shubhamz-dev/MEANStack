@@ -1,16 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
+// logic to create  metadata for comp and module
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+// logic which helps to exe copm from module
+import { BrowserModule } from '@angular/platform-browser';
+
+import { FirstComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [FirstComponent],
+  imports: [BrowserModule],
+  bootstrap: [FirstComponent],
 })
-export class AppModule { }
+export class FirstModule {}
