@@ -5,9 +5,46 @@
     <div class="row">
       <!-- Start : row -->
 
-      <h1>Products</h1>
+      <h3 class="center">{{ title }}</h3>
+      <!-- 
+        for( let mobPart of mobParts){
+         mobPart
+      } 
+
+      if(){
+
+      }
+    -->
+
+      <!-- big 'o' -->
+
+      <ul>
+        <li class="prod" *ngFor="let mobPart of mobParts">
+          <p>Product Id: {{ mobPart.prodId }}</p>
+          <p>Product Name: {{ mobPart.prodName }}</p>
+          <p *ngIf="0 < mobPart.prodInstock; else outOfStock">
+            Product In Stock: {{ mobPart.prodInstock }}
+          </p>
+
+          <ng-template #outOfStock>Out Of Stock</ng-template>
+
+          <p>Product MRP: {{ mobPart.prodPrice }}</p>
+        </li>
+      </ul>
+
+      <!-- <div>
+        <p>Product Id: {{ mobPart.prodId }}</p> 
+        <p>Product Name: {{ mobPart.prodName }}</p>
+        <p>Product In Stock: {{ mobPart.prodInstock }}</p>
+        <p>Product MRP: {{ mobPart.prodPrice }}</p>
+      </div> -->
       <!-- End : row -->
     </div>
   </div>
 </div>
 <!--/ products.component.html -->
+
+<!-- 
+  var   large scope    : max mem
+  let   block level {} : min mem
+ -->

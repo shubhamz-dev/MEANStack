@@ -25,6 +25,6 @@ import { ProductsComponent } from './layouts/products/products.component';
     FooterComponent,
   ],
   imports: [BrowserModule],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent], // root view: entrypoint
 })
 export class AppModule {}
