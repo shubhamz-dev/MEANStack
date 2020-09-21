@@ -1,12 +1,17 @@
-<div class="cls" id="div1"><h1>Menu</h1></div>
+<!-- nav.component.html -->
+<nav class="white" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
 
-<!-- 
-ng g c layouts/nav
-ng g c layouts/banner-one
-ng g c layouts/peoducts
-ng g c layouts/banner-two
-ng g c layouts/cantact-us
-ng g c layouts/banner-three
-ng g c layouts/footer
-
- -->
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    >
+  </div>
+</nav>
+<!--/ nav.component.html -->

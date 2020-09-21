@@ -4,19 +4,27 @@ import { NgModule } from '@angular/core';
 // logic which helps to exe copm from module
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FirstComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
-import { PeoductsComponent } from './layouts/peoducts/peoducts.component';
 import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
-import { CantactUsComponent } from './layouts/cantact-us/cantact-us.component';
 import { BannerThreeComponent } from './layouts/banner-three/banner-three.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { ShubhComponent } from './shubh/shubh.component';
+import { ContactUsComponent } from './layouts/contact-us/contact-us.component';
+import { ProductsComponent } from './layouts/products/products.component';
 
 @NgModule({
-  declarations: [FirstComponent, NavComponent, BannerOneComponent, PeoductsComponent, BannerTwoComponent, CantactUsComponent, BannerThreeComponent, FooterComponent, ShubhComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    BannerOneComponent,
+    ProductsComponent,
+    BannerTwoComponent,
+    ContactUsComponent,
+    BannerThreeComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule],
-  bootstrap: [FirstComponent],
+  bootstrap: [AppComponent],
 })
-export class FirstModule {}
+export class AppModule {}

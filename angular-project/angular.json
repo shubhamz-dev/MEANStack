@@ -21,10 +21,15 @@
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/al-rukh/css/materialize.min.css",
+              "node_modules/al-rukh/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/al-rukh/js/jquery-2.1.1.min.js",
+              "node_modules/al-rukh/js/materialize.min.js",
+              "node_modules/al-rukh/js/init.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -83,10 +88,15 @@
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/al-rukh/css/materialize.min.css",
+              "node_modules/al-rukh/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/al-rukh/js/jquery-2.1.1.min.js",
+              "node_modules/al-rukh/js/materialize.min.js",
+              "node_modules/al-rukh/js/init.js"
+            ]
           }
         },
         "lint": {
