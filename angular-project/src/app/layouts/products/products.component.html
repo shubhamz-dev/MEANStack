@@ -18,6 +18,8 @@
 
       <!-- big 'o' -->
 
+      <!-- What is 'directive' ? -->
+
       <ul>
         <li class="prod" *ngFor="let mobPart of mobParts">
           <p>Product Id: {{ mobPart.prodId }}</p>
@@ -31,6 +33,20 @@
           <p>Product MRP: {{ mobPart.prodPrice }}</p>
         </li>
       </ul>
+
+      <!-- 
+  <div *ngIf="isLoggedIn">
+  Welcome back, friend.
+</div>
+With our new found knowledge, we can now understand that it’s equivalent to this:
+
+<ng-template [ngIf]="isLoggedIn">
+  <div>
+    Welcome back, friend.
+  </div>
+</ng-template>
+
+ -->
 
       <!-- <div>
         <p>Product Id: {{ mobPart.prodId }}</p> 
