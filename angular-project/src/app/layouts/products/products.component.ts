@@ -14,6 +14,10 @@ import { Component, OnInit } from '@angular/core';
         border-radius: 5px;
         box-shadow: 1px 1px 4px orange;
       }
+
+      .soldOut {
+        color: red;
+      }
     `,
   ],
 })
@@ -26,18 +30,24 @@ export class ProductsComponent {
       prodName: 'Mobile 1',
       prodInstock: 150,
       prodPrice: 18000,
+      veg: true,
+      sold: false,
     },
     {
       prodId: 1002,
       prodName: 'Mobile 2',
       prodInstock: 50,
       prodPrice: 18000,
+      veg: false,
+      sold: true,
     },
     {
       prodId: 1003,
       prodName: 'Mobile 3',
       prodInstock: 0,
       prodPrice: 18000,
+      veg: true,
+      sold: false,
     },
   ];
 }
