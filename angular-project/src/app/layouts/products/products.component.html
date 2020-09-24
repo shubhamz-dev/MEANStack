@@ -6,6 +6,10 @@
       <!-- Start : row -->
 
       <h3 class="center" ngNonBindable>{{ title }}</h3>
+
+      <app-mobiles></app-mobiles>
+      <app-laptop></app-laptop>
+      <app-bikes></app-bikes>
       <!-- 
         for( let mobPart of mobParts){
          mobPart
@@ -19,35 +23,6 @@
       <!-- big 'o' -->
 
       <!-- What is 'directive' ? -->
-
-      <ul>
-        <li
-          [ngClass]="{ soldOut: mobPart.sold }"
-          class="prod"
-          *ngFor="let mobPart of mobParts"
-        >
-          <p>Product Id: {{ mobPart.prodId }}</p>
-          <p>Product Name: {{ mobPart.prodName }}</p>
-          <p *ngIf="0 < mobPart.prodInstock; else outOfStock">
-            Product In Stock: {{ mobPart.prodInstock }}
-          </p>
-
-          <ng-template #outOfStock>Out Of Stock</ng-template>
-
-          <p>Product MRP: {{ mobPart.prodPrice }}</p>
-          <div
-            [ngStyle]="{
-              display: mobPart.veg === true ? 'inline-block' : 'none'
-            }"
-          >
-            VEG:
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Green_sphere.svg/2000px-Green_sphere.svg.png"
-              width="16"
-            />
-          </div>
-        </li>
-      </ul>
 
       <!-- 
   <div *ngIf="isLoggedIn">

@@ -1,0 +1,82 @@
+<h4 class="center" appSimpleStyle>
+  We have {{ calcProds() }} ptoducts in stock...!
+</h4>
+<!-- 
+  document.getEBId('appSimpleStyle').style.color='red'
+ -->
+<ul>
+  <li
+    [ngClass]="{ soldOut: mobPart.sold }"
+    class="prod"
+    *ngFor="let mobPart of mobParts"
+  >
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../../assets/img/sample-1.jpg" />
+          <span class="card-title">{{ mobPart.prodName | uppercase }}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"
+            ><i class="material-icons">add</i></a
+          >
+        </div>
+        <div class="card-content">
+          <p>Product Id: {{ mobPart.prodId }}</p>
+          <p>Product Name: {{ mobPart.prodName | uppercase }}</p>
+          <p *ngIf="0 < mobPart.prodInstock; else outOfStock">
+            Product In Stock: {{ mobPart.prodInstock }}
+          </p>
+
+          <ng-template #outOfStock>
+            <p>Out Of Stock</p>
+          </ng-template>
+
+          <p>
+            Product MRP:
+            <s style="color: red"
+              ><span style="color: #000">{{
+                mobPart.prodPrice | currency: "INR"
+              }}</span></s
+            >
+          </p>
+          <p>
+            Product Offer: {{ mobPart.prodPrice | offer | currency: "INR" }}
+          </p>
+          <div
+            [ngStyle]="{
+              display: mobPart.veg === true ? 'inline-block' : 'none'
+            }"
+          >
+            VEG:
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Green_sphere.svg/2000px-Green_sphere.svg.png"
+              width="16"
+            />
+          </div>
+          <span [ngSwitch]="mobPart.country">
+            Country :
+            <img
+              *ngSwitchCase="'Australia'"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+              width="24"
+            />
+            <img
+              *ngSwitchCase="'Germany'"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+              width="24"
+            />
+            <img
+              *ngSwitchCase="'India'"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+              width="24"
+            />
+            <img
+              *ngSwitchDefault
+              src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
+              width="24"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

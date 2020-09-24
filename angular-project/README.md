@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+<!--
+
+Assi 1:
+
+    1. App with own resp design
+
+Assi 2:
+
+    1. Four or more Products with diff data
+
+Assi 3:
+
+    1. Two Methodes
+    2. new pipes
+    3. new cust. pipe
+    4. new cust directive
+    5. code with code STD [ html, css, js]
+    6. comments
+    7. model(s)
+
+-->
