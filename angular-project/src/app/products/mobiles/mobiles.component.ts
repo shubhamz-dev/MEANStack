@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // product model
 import { MobParts } from './../../model/mob-parts';
+import { MOBPARTS } from './../../data/mock';
 
 @Component({
   selector: 'app-mobiles',
@@ -17,35 +18,7 @@ export class MobilesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  mobParts: MobParts[] = [
-    {
-      prodId: 1001,
-      prodName: 'MOBILE SCREEN',
-      prodInstock: 150,
-      prodPrice: 18000,
-      veg: false,
-      sold: false,
-      country: 'India',
-    },
-    {
-      prodId: 1002,
-      prodName: 'mobile keypad',
-      prodInstock: 50,
-      prodPrice: 18000,
-      veg: false,
-      sold: true,
-      country: 'Germany',
-    },
-    {
-      prodId: 1003,
-      prodName: 'Headphones',
-      prodInstock: 0,
-      prodPrice: 18000,
-      veg: false,
-      sold: false,
-      country: '',
-    },
-  ];
+  mobParts: MobParts[] = MOBPARTS;
 
   // meth
   // params
@@ -60,3 +33,13 @@ export class MobilesComponent implements OnInit {
     return sum;
   }
 }
+
+// class MobParts {
+//   prodId: number;
+//   prodName: string;
+//   prodInstock: number;
+//   prodPrice: number;
+//   veg: boolean;
+//   sold: boolean;
+//   country: string;
+// }

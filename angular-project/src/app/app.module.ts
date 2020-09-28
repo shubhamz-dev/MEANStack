@@ -28,7 +28,7 @@ import { SimpleStyleDirective } from './directives/simple-style.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
+    NavComponent, // <app-nav>
     BannerOneComponent,
     ProductsComponent,
     BannerTwoComponent,
