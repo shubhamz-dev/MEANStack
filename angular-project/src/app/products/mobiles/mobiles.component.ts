@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { MobParts } from './../../model/mob-parts';
 import { MOBPARTS } from './../../data/mock';
 
+// mock / API -> Val-> logic | pipe | modi
 @Component({
   selector: 'app-mobiles',
   templateUrl: './mobiles.component.html',
@@ -16,9 +17,18 @@ export class MobilesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  // 8 lifecycle hooks
+  ngOnInit(): void {
+    this.mobParts = MOBPARTS; // 100mb
+  }
 
-  mobParts: MobParts[] = MOBPARTS;
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.mobParts = []; // 0mb
+  }
+
+  mobParts: MobParts[];
 
   // meth
   // params

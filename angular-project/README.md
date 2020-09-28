@@ -46,4 +46,10 @@ Assi 3:
     6. comments
     7. model(s)
 
+
+Assi 4:
+
+    1. prods Mock
+    2. life Cycle hooks
+
 -->
